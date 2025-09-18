@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Office Gossip Daily 📰</title>
+  <style>
+    body {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      background: #fff3e0;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #d32f2f;
+      font-size: 2.5em;
+    }
+    #headline {
+      margin-top: 30px;
+      font-size: 1.8em;
+      color: #444;
+      background: #ffe0b2;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    button {
+      margin-top: 30px;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      background: #f44336;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <h1>🤣 Office Gossip Daily 🤣</h1>
+  <p>Click the button to reveal today’s *totally fake* gossip!</p>
+
+  <button onclick="showGossip()">Show Gossip 📰</button>
+
+  <div id="headline">No gossip yet...</div>
+
+  <script>
+    const gossips = [
+      "BREAKING: Coffee machine demands a salary increase ☕💰",
+      "EXCLUSIVE: Boss caught feeding printer snacks 🖨️🍪",
+      "Rumor: Someone finished a meeting in under 10 minutes 😱",
+      "Alert: Office chair planning a long vacation 🪑✈️",
+      "Hot News: WiFi secretly powered by your good vibes 📶✨",
+      "Scandal: Spreadsheet files running away from deadlines 📊🏃",
+      "Confession: Stapler admits it’s tired of drama 📎😂"
+    ];
+
+    function showGossip() {
+      const randomIndex = Math.floor(Math.random() * gossips.length);
+      document.getElementById("headline").textContent = gossips[randomIndex];
+    }
+  </script>
+</body>
+</html>
